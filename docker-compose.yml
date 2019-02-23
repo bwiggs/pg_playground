@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:10
+    ports:
+      - "5432:5432"
+  pgadmin:
+    ports:
+      - "54321:80"
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pgadmin
+      - PGADMIN_DEFAULT_PASSWORD=pgadmin
